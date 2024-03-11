@@ -29,28 +29,32 @@ def get_flight_price(source_airport_code, destination_airport_code, departure_da
     data = response.json()
 
     if data.get('status'):
-        flights_data = data['data']['flights']
-
-        print("Flights:")
-        for flight in flights_data:
-            print("\t---")
+        flights_data = []
+        for flight in data['data']['flights']:
+            flight_info = {}
+            segments = []
             for segment in flight['segments']:
-                print("\tSegment:")
+                legs = []
                 for leg in segment['legs']:
-                    print(f"\t\tDeparture: {leg['originStationCode']}")
-                    print(f"\t\tDestination: {leg['destinationStationCode']}")
-                    print(f"\t\tDeparture Date: {leg['departureDateTime']}")
-                    print(f"\t\tArrival Date: {leg['arrivalDateTime']}")
-                    print(f"\t\tMarketing Carrier: {leg['marketingCarrier']['displayName']}")
-                print("\t---")
-            print(f"\tTotal Price: £{flight['purchaseLinks'][0]['totalPrice']}")
-            print(f"\tURL: {flight['purchaseLinks'][0]['url']}")
-
-            # Print return date if it exists
+                    leg_info = {
+                        'departure': leg['originStationCode'],
+                        'destination': leg['destinationStationCode'],
+                        'departure_date_time': leg['departureDateTime'],
+                        'arrival_date_time': leg['arrivalDateTime'],
+                        'marketing_carrier': leg['marketingCarrier']['displayName']
+                    }
+                    legs.append(leg_info)
+                segments.append(legs)
+            flight_info['segments'] = segments
+            flight_info['total_price'] = flight['purchaseLinks'][0]['totalPrice']
+            flight_info['url'] = flight['purchaseLinks'][0]['url']
             if 'returnDate' in querystring:
-                print(f"\tReturn Date: {querystring['returnDate']}")
+                flight_info['return_date'] = querystring['returnDate']
+            flights_data.append(flight_info)
+        return flights_data
     else:
-        print("No flights found.")
+        return None
+
 
 # Example usage
 get_flight_price("LGW", "AGP", "2024-04-11", 1)

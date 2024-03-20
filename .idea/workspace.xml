@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e17ebf42-6720-41f3-97f0-3f0bae54d810" name="Changes" comment="Get Flight price details function implementation">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_interface/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_interface/templates/search_flight.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_interface/user_interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e17ebf42-6720-41f3-97f0-3f0bae54d810" name="Changes" comment="Updating">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_integration/flight_prices.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_integration/flight_prices.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_interface/templates/search_flight.html" beforeDir="false" afterPath="$PROJECT_DIR$/user_interface/templates/search_flight.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_interface/user_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_interface/user_interface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +58,7 @@
     "Python.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": ""
   }
 }]]></component>
   <component name="RunManager">
@@ -133,12 +130,22 @@
       <option name="project" value="LOCAL" />
       <updated>1710174850926</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Flask Web Application">
+      <option name="closed" value="true" />
+      <created>1710180974724</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710180974724</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Get Flight price details" />
     <MESSAGE value="Get Flight price details function implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Get Flight price details function implementation" />
+    <MESSAGE value="Flask Web Application" />
+    <MESSAGE value="Updating" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating" />
   </component>
 </project>

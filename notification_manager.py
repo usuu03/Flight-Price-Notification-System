@@ -3,8 +3,8 @@ from twilio.rest import Client
 
 TWILIO_SID = "*************"
 TWILIO_TOKEN = "************"
-TWILIO_VIRTUAL_NUM = "+447458158157"
-TWILIO_NUM = "+447490773218"
+TWILIO_VIRTUAL_NUM = "******"
+TWILIO_NUM = "********"
 
 
 class NotificationManager:

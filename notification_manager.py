@@ -1,7 +1,8 @@
 from twilio.rest import Client
 
-TWILIO_SID = "ACce73b5762ab0590acfe16016ef2294b6"
-TWILIO_TOKEN = "fc41a6e7e1793c0c3d287b1cb13cb021"
+
+TWILIO_SID = "*************"
+TWILIO_TOKEN = "************"
 TWILIO_VIRTUAL_NUM = "+447458158157"
 TWILIO_NUM = "+447490773218"
 

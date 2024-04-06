@@ -32,7 +32,7 @@ Run the Python script `main.py`. This will trigger the program to check for flig
 
 Below are examples of the text messages you may receive from the program:
 
-![Example SMS Notification](https://drive.google.com/file/d/1dx2HzWQFJLFt8jO6R-gz5nHv2keqfHDD/uc?export=download)
+![Example SMS Notification](https://drive.google.com/file/d/1dx2HzWQFJLFt8jO6R-gz5nHv2keqfHDD/view?usp=sharing)
 
 ## Acknowledgements
 

@@ -1,59 +1,54 @@
-### Flight Price Notification System
+Sure, here's the revised README with the correct download link:
 
-This project is a flight price notification system designed to retrieve flight details from an external API, check for low prices, and send notifications to users about potential deals.
+# Flight Deals Notifier
 
-#### Features:
+This Python program notifies users about flight deals via SMS using the Twilio API. It fetches flight data from the Kiwi Tequila API and Google Sheets, and then sends notifications about deals based on user-defined criteria.
 
-1. **FlightSearch Class:** This class is responsible for interacting with the Kiwi.com API to search for flights between specified origin and destination cities. It includes methods to retrieve IATA codes for cities and search for available flights within a specified date range.
+## Prerequisites
 
-2. **NotificationManager Class:** This class handles the sending of SMS notifications to users. It utilizes the Twilio API to send messages containing flight deal details.
+To use this program, you'll need:
 
-3. **DataManager Class:** This class communicates with a Google Sheet to retrieve and update flight data. It fetches flight details from the Google Sheet and updates IATA codes based on retrieved data.
+- Python installed on your system.
+- Accounts on Twilio, Kiwi Tequila, and Google Sheets.
+- API keys and credentials for Twilio, Kiwi Tequila, and Google Sheets.
 
-4. **FlightData Class:** This class structures the flight data retrieved from the Kiwi.com API. It contains attributes such as price, origin city, origin airport, destination city, destination airport, departure date, and return date.
+## Setup
 
-#### Files:
-
-1. **flight_search.py:** Contains the FlightSearch class, responsible for searching for flights using the Kiwi.com API.
-
-2. **notification_manager.py:** Contains the NotificationManager class, which handles the sending of SMS notifications using the Twilio API.
-
-3. **data_manager.py:** Contains the DataManager class, responsible for interacting with Google Sheets to retrieve and update flight data.
-
-4. **flight_data.py:** Contains the FlightData class, which structures the flight data retrieved from the Kiwi.com API.
-
-5. **main.py:** The main script that orchestrates the entire flight price notification process. It retrieves destination data, checks for flight deals, and sends notifications to users.
-
-#### External APIs:
-
-1. **Kiwi.com API:** Used for searching for available flights between specified origin and destination cities.
-
-2. **Twilio API:** Utilized for sending SMS notifications to users about flight deals.
-
-#### Setup:
-
-1. Ensure all required packages are installed. You can install them using pip:
-
+1. Clone the repository.
+2. Install the required dependencies:
    ```
-   pip install requests twilio
+   pip install twilio
    ```
+3. Obtain API keys for Twilio and Kiwi Tequila.
+4. Replace `TWILIO_SID`, `TWILIO_TOKEN`, `TWILIO_VIRTUAL_NUM`, `TWILIO_NUM`, and `TEQUILA_API_KEY` with your respective API keys.
+5. Ensure your Google Sheet with destination data is properly formatted and accessible.
+6. Update the Google Sheet URL in the code to fetch destination data.
 
-2. Set up Twilio by obtaining your account SID, authentication token, and virtual phone number.
+## Usage
 
-3. Update the Twilio SID, token, and phone numbers in the code to match your Twilio account details.
+Run the Python script `main.py`. This will trigger the program to check for flight deals based on predefined criteria and send SMS notifications for any deals found.
 
-4. Ensure you have access to the Google Sheet containing flight data, and update the Google Sheet URL in the DataManager class.
+## Example SMS Notifications
 
-5. Run the main.py script to start the flight price notification system.
+Below are examples of the text messages you may receive from the program:
 
-#### Usage:
+![Example SMS Notification](https://drive.google.com/file/d/1dx2HzWQFJLFt8jO6R-gz5nHv2keqfHDD/uc?export=download)
 
-1. Run the main.py script to initiate the flight price notification system.
+## Acknowledgements
 
-2. Receive SMS notifications about low-priced flight deals based on the criteria specified in the Google Sheet.
+- **Twilio**: For providing the SMS service.
+- **Kiwi Tequila**: For supplying flight data.
+- **Google Sheets API**: For accessing destination data.
 
-3. Monitor the terminal for logging information about the flight search and notification process.
+## Troubleshooting
 
-#### Note:
+- If you encounter any issues with the program, ensure that your API keys and credentials are correctly configured.
+- Check for any errors in the code or dependencies.
 
-This project is designed to provide users with notifications about low-priced flight deals based on data retrieved from Google Sheets and flight searches conducted through the Kiwi.com API. Make sure to adhere to the terms of use of the external APIs and services utilized in this project.
+## Contributing
+
+Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

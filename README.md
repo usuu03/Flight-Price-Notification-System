@@ -1,5 +1,3 @@
-Sure, here's the revised README with the correct download link:
-
 # Flight Deals Notifier
 
 This Python program notifies users about flight deals via SMS using the Twilio API. It fetches flight data from the Kiwi Tequila API and Google Sheets, and then sends notifications about deals based on user-defined criteria.

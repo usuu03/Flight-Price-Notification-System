@@ -1,5 +1,5 @@
 import requests
-from flight_data import FlightData
+from backend.flight_data import FlightData
 
 TEQUILA_URL = "https://tequila-api.kiwi.com"
 TEQUILA_API_KEY = '7qB4xNHn2XIj12kc03IgEziLS3nQrU2C'
